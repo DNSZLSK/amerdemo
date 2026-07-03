@@ -1,0 +1,9 @@
+# Deck de pitch interne (pas du contenu web, repo public)
+*.pptx
+
+# HTML source, publie en index.html
+amer_homepage_v3_final.html
+
+# Junk OS
+.DS_Store
+Thumbs.db
