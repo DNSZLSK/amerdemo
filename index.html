@@ -11,16 +11,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!--
-  Maquette AMER, page d'accueil. Direction validee.
+  Maquette AMER, page d'accueil. V4 : direction plus lumineuse et accueillante.
+  Hero et footer restent sombres pour garder le punch ; l'agenda et la section
+  participer basculent en fond crème. Photos réchauffées (soleil, ciel bleu, gens).
+
   IMAGES DU LIEU : photos libres de Wikimedia Commons (categories "Tour de Cesson" /
   "Manoir de la Tour de Cesson"), majoritairement CC BY-SA. A crediter ou a remplacer
   par les photos propres de l'association pour la mise en production.
-  Fichiers du lieu : hero3 (hero), tour-b + manoir-2024 + bunker-ext (triptyque),
-  manoir-2021 (fond benevoles). Panorama : pano-b (Pexels, placeholder coucher de soleil,
-  a remplacer par la vue drone du domaine).
-  IMAGES D'AMBIANCE EVENEMENTS : photos Pexels (licence libre, usage commercial autorise,
-  sans attribution obligatoire). openair4 (bal en plein air), halloween1 (citrouille),
-  noel2 (marche de Noel). A remplacer par les vraies photos des editions passees.
+  Fichiers du lieu : cand07 (hero, tour au soleil), cand01 + teuf + bunker-ext
+  (triptyque), cand-rohannech (vue du domaine, carrousel). Panorama : pano-c
+  (Pexels, placeholder coucher de soleil, a remplacer par la vue drone du domaine).
+
+  IMAGES D'AMBIANCE / GENS : photos Pexels (licence libre, usage commercial autorise,
+  sans attribution obligatoire), PLACEHOLDERS a remplacer par les vraies photos du
+  domaine (shoot du 19 juillet). fete-openair (journee musicale), pique-nique-baie +
+  amis-ete (carrousel), halloween1 (citrouille), noel2 (marche de Noel).
 -->
 
 <style>
@@ -31,6 +36,7 @@
     --sand:#F2EDE6;
     --night:#1B2631;
     --amber:#D4A574;
+    --amber-ink:#A9742F;   /* amber lisible sur fond clair */
     --stone:#8B7D6B;
   }
   *{box-sizing:border-box;}
@@ -58,11 +64,11 @@
     display:flex;
     flex-direction:column;
     background-size:cover;
-    background-position:center 30%;
+    background-position:center 35%;
     background-image:
-      linear-gradient(to right, rgba(13,13,13,.9) 0%, rgba(13,13,13,.65) 30%, rgba(13,13,13,.15) 55%, rgba(13,13,13,0) 80%),
-      linear-gradient(to bottom, rgba(13,13,13,.42) 0%, rgba(13,13,13,.22) 32%, rgba(13,13,13,.5) 62%, rgba(13,13,13,.92) 88%, #0D0D0D 100%),
-      url('images/hero4.jpg');
+      linear-gradient(to right, rgba(13,13,13,.9) 0%, rgba(13,13,13,.6) 30%, rgba(13,13,13,.12) 55%, rgba(13,13,13,0) 80%),
+      linear-gradient(to bottom, rgba(13,13,13,.3) 0%, rgba(13,13,13,.1) 30%, rgba(13,13,13,.48) 62%, rgba(13,13,13,.92) 88%, #0D0D0D 100%),
+      url('images/cand07.jpg');
   }
   .topbar{
     position:relative;z-index:3;
@@ -82,7 +88,7 @@
     margin:0 0 20px;max-width:760px;color:#fff;
     text-shadow:0 2px 22px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.45);
   }
-  .hero-content .sub{font-size:14px;color:rgba(255,255,255,.55);margin:0;}
+  .hero-content .sub{font-size:14px;color:rgba(255,255,255,.62);margin:0;}
 
   /* ---------- ARROW ---------- */
   .arw{font-style:normal;}
@@ -90,28 +96,29 @@
   /* ---------- SECTIONS ---------- */
   section{padding:0;}
   .pad{padding:64px 5vw;}
-  .lbl-amber{color:var(--amber);}
+  .lbl-amber{color:var(--amber-ink);}
   .lbl-stone{color:var(--stone);}
 
-  /* ---------- EVENTS ---------- */
-  .events{background:var(--ink);padding:8px 5vw 56px;}
-  .events .top{border-top:1px solid rgba(255,255,255,.08);padding-top:34px;margin-bottom:28px;}
+  /* ---------- EVENTS (fond crème) ---------- */
+  .events{background:var(--sand);color:var(--night);padding:8px 5vw 60px;}
+  .events .top{border-top:1px solid rgba(27,38,49,.16);padding-top:34px;margin-bottom:28px;}
   .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
   .ev{
-    position:relative;min-height:330px;border-radius:10px;overflow:hidden;
+    position:relative;min-height:340px;border-radius:10px;overflow:hidden;
     display:flex;flex-direction:column;justify-content:flex-end;
     padding:26px 24px;color:#fff;
     background-size:cover;background-position:center;
+    box-shadow:0 10px 26px rgba(27,38,49,.12);
     transition:transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s;
   }
-  .ev:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.45);}
-  .ev .date{font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.5px;}
+  .ev:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(27,38,49,.28);}
+  .ev .date{font-size:11px;color:rgba(255,255,255,.75);letter-spacing:.5px;}
   .ev h3{font-family:var(--font-voice);font-weight:400;font-size:20px;line-height:1.25;margin:8px 0 12px;}
-  .ev p{font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.65;margin:0 0 16px;}
+  .ev p{font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.65;margin:0 0 16px;}
   .ev .price{font-size:11px;color:var(--amber);}
   .events .more{text-align:right;margin-top:18px;}
-  .events .more a{font-size:12px;color:rgba(255,255,255,.4);transition:color .2s;}
-  .events .more a:hover{color:#fff;}
+  .events .more a{font-size:12px;color:var(--stone);transition:color .2s;}
+  .events .more a:hover{color:var(--night);}
 
   /* ---------- LE LIEU ---------- */
   .lieu{background:var(--sand);color:var(--night);}
@@ -129,32 +136,32 @@
 
   /* ---------- PANORAMA ---------- */
   .pano{position:relative;background:#10171d;margin:0;}
-  .pano img{display:block;width:100%;height:clamp(300px,46vw,540px);object-fit:cover;object-position:center 35%;}
+  .pano img{display:block;width:100%;height:clamp(300px,46vw,540px);object-fit:cover;object-position:center 50%;}
   .pano figcaption{
     position:absolute;inset:0;display:flex;flex-direction:column;
     align-items:center;justify-content:center;text-align:center;padding:24px;
-    background:radial-gradient(ellipse at center, rgba(13,13,13,.5) 0%, rgba(13,13,13,.18) 55%, rgba(13,13,13,0) 82%);
+    background:radial-gradient(ellipse at center, rgba(13,13,13,.55) 0%, rgba(13,13,13,.22) 55%, rgba(13,13,13,0) 82%);
   }
   .pano figcaption .big{
     font-family:var(--font-voice);font-weight:400;
     font-size:clamp(22px,3.4vw,40px);color:#fff;margin:0;line-height:1.2;
-    text-shadow:0 2px 26px rgba(0,0,0,.6);
+    text-shadow:0 2px 26px rgba(0,0,0,.7);
   }
   .pano figcaption .small{
-    font-size:clamp(12px,1.5vw,15px);color:rgba(255,255,255,.88);margin:12px 0 0;
-    letter-spacing:.3px;text-shadow:0 1px 14px rgba(0,0,0,.65);
+    font-size:clamp(12px,1.5vw,15px);color:rgba(255,255,255,.9);margin:12px 0 0;
+    letter-spacing:.3px;text-shadow:0 1px 14px rgba(0,0,0,.75);
   }
 
-  /* ---------- PARTICIPER ---------- */
+  /* ---------- PARTICIPER (fond crème) ---------- */
   .participer{
-    background-image:linear-gradient(rgba(27,38,49,.93), rgba(27,38,49,.965)), url('images/manoir-2021.jpg');
-    background-size:cover;background-position:center;
+    background:var(--sand);
+    color:var(--night);
   }
-  .participer .eyebrow{color:var(--amber);margin-bottom:8px;}
+  .participer .eyebrow{color:var(--amber-ink);margin-bottom:8px;}
   .participer-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:34px;}
-  .participer h3{font-family:var(--font-voice);font-weight:400;font-size:23px;margin:0 0 14px;color:#fff;}
-  .participer p{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.75;margin:0 0 22px;}
-  .amber-link{display:inline-block;font-size:12px;color:var(--amber);border-bottom:1px solid var(--amber);padding-bottom:3px;transition:opacity .2s;}
+  .participer h3{font-family:var(--font-voice);font-weight:400;font-size:23px;margin:0 0 14px;color:var(--night);}
+  .participer p{font-size:13.5px;color:#5f5f5f;line-height:1.75;margin:0 0 22px;}
+  .amber-link{display:inline-block;font-size:12px;color:var(--amber-ink);border-bottom:1px solid var(--amber-ink);padding-bottom:3px;transition:opacity .2s;}
   .amber-link:hover{opacity:.65;}
 
   /* ---------- INSTAGRAM (carrousel infini) ---------- */
@@ -230,7 +237,7 @@
   <div class="hero-content">
     <div class="inner">
       <p class="eyebrow">Domaine de la Tour de Cesson · Saint-Brieuc</p>
-      <h1>À Amer on peut admirer le coucher de soleil, danser pieds nus, explorer des bunkers, restaurer un manoir, ou ne rien faire du tout.</h1>
+      <h1>À Amer on peut admirer le coucher de soleil, danser pieds nus, explorer des bunkers, retaper de vieilles pierres, ou ne rien faire du tout.</h1>
       <p class="sub">Ouvert tous les jours, 8h - 20h. Entrée libre.</p>
     </div>
   </div>
@@ -244,8 +251,8 @@
     </div>
     <div class="events-grid">
 
-      <a class="ev" href="#" style="background-image:linear-gradient(to top, rgba(13,13,13,.92) 8%, rgba(13,13,13,.55) 48%, rgba(13,13,13,.12) 100%), url('images/openair4.jpg');">
-        <span class="date">sam. 19 juillet</span>
+      <a class="ev" href="#" style="background-image:linear-gradient(to top, rgba(13,13,13,.9) 6%, rgba(13,13,13,.48) 46%, rgba(13,13,13,.08) 100%), url('images/fete-openair.jpg');">
+        <span class="date">sam. 22 août</span>
         <h3>Journée récréative musicale</h3>
         <p>Musique live, buvette, soleil. Le domaine s'anime pour la deuxième fois.</p>
         <span class="price">Gratuit, don libre <i class="arw">&rarr;</i></span>
@@ -280,11 +287,11 @@
 
     <div class="trip">
       <figure>
-        <div class="figframe"><img src="images/tour-b.jpg" alt="La tour de Cesson, donjon en ruines construit à partir de 1395"></div>
+        <div class="figframe"><img src="images/cand01.jpg" alt="La tour de Cesson, donjon en ruines construit à partir de 1395, sous un ciel bleu"></div>
         <figcaption>La tour, érigée à partir de 1395 sur ordre du duc Jean IV.</figcaption>
       </figure>
       <figure>
-        <div class="figframe"><img src="images/manoir-2024.jpg" alt="Le manoir Glais-Bizoin en ruines après l'incendie de 2018"></div>
+        <div class="figframe"><img src="images/teuf.jpg" alt="Le manoir Glais-Bizoin en ruines après l'incendie de 2018, sous le soleil"></div>
         <figcaption>Le manoir Glais-Bizoin, ravagé par un incendie en 2018.</figcaption>
       </figure>
       <figure>
@@ -297,7 +304,7 @@
 
 <!-- ============ PANORAMA ============ -->
 <figure class="pano">
-  <img src="images/vu_panoramique_tour.jpg" alt="La tour de Cesson, donjon en ruines dressé au-dessus de la baie de Saint-Brieuc">
+  <img src="images/pano-c.jpg" alt="Coucher de soleil sur la baie de Saint-Brieuc, vue depuis le domaine de la Tour de Cesson">
   <figcaption>
     <p class="big">Debout depuis 1395.</p>
     <p class="small">Six siècles de tempêtes et de couchers de soleil sur la baie.</p>
@@ -335,25 +342,25 @@
   <div class="insta-marquee">
     <div class="insta-track">
       <!-- jeu 1 -->
+      <a href="https://www.instagram.com/amer"><img src="images/pique-nique-baie.jpg" alt="Pique-nique musical face à la baie"></a>
+      <a href="https://www.instagram.com/amer"><img src="images/amis-ete.jpg" alt="Retrouvailles au soleil sur le domaine"></a>
+      <a href="https://www.instagram.com/amer"><img src="images/cand-rohannech.jpg" alt="Le domaine et la tour au-dessus de la baie"></a>
+      <a href="https://www.instagram.com/amer"><img src="images/teuf.jpg" alt="Le manoir sous le ciel bleu"></a>
+      <a href="https://www.instagram.com/amer"><img src="images/noel2.jpg" alt="Marché de Noël"></a>
       <a href="https://www.instagram.com/amer"><img src="images/openair4.jpg" alt="Bal en plein air"></a>
       <a href="https://www.instagram.com/amer"><img src="images/tour-a.jpg" alt="La tour de Cesson"></a>
-      <a href="https://www.instagram.com/amer"><img src="images/teuf.jpg" alt="Le manoir et la tour"></a>
       <a href="https://www.instagram.com/amer"><img src="images/bunker-int.jpg" alt="Intérieur d'un bunker"></a>
-      <a href="https://www.instagram.com/amer"><img src="images/noel2.jpg" alt="Marché de Noël"></a>
       <a href="https://www.instagram.com/amer"><img src="images/halloween1.jpg" alt="Halloween au domaine"></a>
-      <a href="https://www.instagram.com/amer"><img src="images/hero3.jpg" alt="La tour en contre-plongée"></a>
-      <a href="https://www.instagram.com/amer"><img src="images/bunker-ext.jpg" alt="Bunker sous le lierre"></a>
-      <a href="https://www.instagram.com/amer"><img src="images/manoir-2024.jpg" alt="Le manoir en ruines"></a>
       <!-- jeu 2 : copie pour la boucle continue -->
+      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/pique-nique-baie.jpg" alt=""></a>
+      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/amis-ete.jpg" alt=""></a>
+      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/cand-rohannech.jpg" alt=""></a>
+      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/teuf.jpg" alt=""></a>
+      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/noel2.jpg" alt=""></a>
       <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/openair4.jpg" alt=""></a>
       <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/tour-a.jpg" alt=""></a>
-      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/teuf.jpg" alt=""></a>
       <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/bunker-int.jpg" alt=""></a>
-      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/noel2.jpg" alt=""></a>
       <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/halloween1.jpg" alt=""></a>
-      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/hero3.jpg" alt=""></a>
-      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/bunker-ext.jpg" alt=""></a>
-      <a href="https://www.instagram.com/amer" aria-hidden="true" tabindex="-1"><img src="images/manoir-2024.jpg" alt=""></a>
     </div>
   </div>
 </section>
