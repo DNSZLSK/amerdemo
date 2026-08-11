@@ -4,171 +4,111 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le lieu · AMER, Tour de Cesson</title>
-<meta name="description" content="Six siecles d'histoire sur un promontoire face a la baie de Saint-Brieuc : la tour de 1395, le manoir, les bunkers, la nature.">
+<meta name="description" content="Six siècles d'histoire sur un promontoire face à la baie de Saint-Brieuc : la tour de 1395, le manoir Glais-Bizoin, les bunkers du Mur de l'Atlantique, la nature Natura 2000.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Maquette AMER. Page Le lieu. Meme charte que la page d'accueil (index.html). -->
-
-<style>
-  :root{
-    --font-sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-    --font-voice:'Fraunces','Iowan Old Style',Georgia,serif;
-    --ink:#0D0D0D;
-    --sand:#F2EDE6;
-    --night:#1B2631;
-    --amber:#D4A574;
-    --amber-ink:#A9742F;
-    --stone:#8B7D6B;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--ink);
-    color:#fff;
-    font-family:var(--font-sans);
-    font-weight:400;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-  img{display:block;max-width:100%;}
-  a{color:inherit;}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
-
-  /* topbar partagee */
-  .topbar{
-    position:relative;z-index:3;background:var(--ink);
-    display:flex;justify-content:space-between;align-items:center;
-    padding:22px 5vw;width:100%;
-  }
-  .brand{font-size:16px;font-weight:500;letter-spacing:6px;color:#fff;text-decoration:none;}
-  .topbar nav{display:flex;gap:26px;font-size:13px;}
-  .topbar nav a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
-  .topbar nav a:hover{color:#fff;}
-  .topbar nav a.active{color:#fff;border-bottom:1px solid var(--amber);padding-bottom:2px;}
-
-  /* footer partage (identique a l'accueil) */
-  .foot{background:var(--ink);padding:56px 5vw 30px;}
-  .foot-cols{display:grid;grid-template-columns:1fr auto 1fr;gap:48px;align-items:center;}
-  .foot .brand{font-size:18px;}
-  .foot .addr{font-size:12px;color:rgba(255,255,255,.28);margin:14px 0 0;line-height:1.85;}
-  .foot-center{text-align:center;max-width:540px;justify-self:center;}
-  .foot-def{font-family:var(--font-voice);font-size:15px;line-height:1.65;color:#C2B5A2;margin:0;}
-  .foot-def .def-tag{color:var(--amber);font-style:italic;margin-right:5px;}
-  .foot-copy{font-size:11px;color:rgba(255,255,255,.32);margin:16px 0 0;letter-spacing:.2px;}
-  .foot-right{display:flex;gap:44px;justify-content:flex-end;font-size:12px;}
-  .foot-right a{display:block;color:rgba(255,255,255,.42);line-height:2.2;text-decoration:none;transition:color .2s;}
-  .foot-right a:hover{color:#fff;}
-  @media(max-width:820px){
-    .foot-cols{grid-template-columns:1fr;gap:30px;justify-items:center;text-align:center;}
-    .foot-right{justify-content:center;}
-  }
-  @media(max-width:560px){
-    .topbar nav{display:none;}
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<h2 class="sr-only">Maquette page Le lieu du site AMER</h2>
-<div style="font-family: var(--font-sans); overflow: hidden;">
 
-<div style="background: #0D0D0D; padding: 22px 5vw; display: flex; justify-content: space-between; align-items: center;">
-  <a class="brand" href="index.html" style="text-decoration:none;">AMER</a>
-  <nav style="display: flex; gap: 24px; font-size: 13px;">
-    <a href="amer_page_agenda.html" style="text-decoration: none;">Agenda</a>
-    <a href="amer_page_le_lieu.html" class="active" style="text-decoration: none;">Le lieu</a>
-    <a href="amer_page_participer.html" style="text-decoration: none;">Participer</a>
-    <a href="amer_page_contact.html" style="text-decoration: none;">Contact</a>
-  </nav>
-</div>
+<!-- ============ HERO ============ -->
+<header class="page-hero" style="background-image:url('images/vu_panoramique_tour.jpg');">
+  <div class="topbar">
+    <a class="brand" href="index.html">AMER</a>
+    <nav>
+      <a href="amer_page_agenda.html">Agenda</a>
+      <a href="amer_page_le_lieu.html" class="active">Le lieu</a>
+      <a href="amer_page_participer.html">Participer</a>
+      <a href="amer_page_contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="ph-content">
+    <p class="eyebrow">Le lieu</p>
+    <h1>Six siècles d'histoires empilées sur un promontoire face à la mer.</h1>
+    <p class="sub">Une tour, un manoir, des bunkers, une forêt. Et toujours le même point fixe sur la côte : un amer.</p>
+  </div>
+</header>
 
-<!-- HERO LIEU -->
-<div style="background: linear-gradient(to bottom, rgba(13,13,13,0.3) 0%, rgba(13,13,13,0.7) 70%, #F2EDE6 100%), linear-gradient(135deg, #2C3E50 0%, #2C6E8A 50%, #1B2631 100%); min-height: 360px; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 5vw 48px;">
-  <p style="font-size: 11px; color: #D4A574; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 12px;">Le lieu</p>
-  <h1 style="font-family: var(--font-voice); font-weight: 400; font-size: 40px; color: #fff; margin: 0; max-width: 640px; line-height: 1.2;">Six siècles d'histoires empilées sur un promontoire face à la mer.</h1>
-</div>
-
-<!-- LA TOUR -->
-<div style="background: #F2EDE6; padding: 64px 5vw;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-    <div>
-      <p style="font-size: 11px; color: #A9742F; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px;">1395</p>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 28px; color: #1B2631; margin: 0 0 16px;">La tour</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.8; margin: 0;">Construite sur ordre du duc Jean IV de Montfort pour protéger l'embouchure du Gouët. Cylindrique au dehors, hexagonale au dedans, une architecture unique en Bretagne. Partiellement démantelée en 1598, elle est conservée comme amer pour les navigateurs à partir de 1625. Inscrite aux Monuments Historiques depuis 1926.</p>
+<!-- ============ LA TOUR ============ -->
+<section class="story pad">
+  <div class="story-grid">
+    <div class="story-media">
+      <img src="images/tour-a.jpg" alt="La tour de Cesson, donjon cylindrique de 1395, sous un ciel bleu">
     </div>
-    <div style="border-radius: 10px; height: 320px; overflow: hidden;">
-      <img src="images/tour-a.jpg" alt="La tour de Cesson sous un ciel bleu" style="width:100%; height:100%; object-fit:cover; display:block;">
+    <div class="story-body">
+      <p class="story-date">1395 · La tour</p>
+      <h2 class="voice">Le repère des marins</h2>
+      <p>Construite sur ordre du duc Jean IV de Montfort pour protéger l'embouchure du Gouët. Cylindrique au dehors, hexagonale au dedans, une architecture unique en Bretagne. Partiellement démantelée en 1598, elle est conservée comme amer pour les navigateurs à partir de 1625. Inscrite aux Monuments Historiques depuis 1926.</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- LE MANOIR -->
-<div style="background: #E8E3DB; padding: 64px 5vw;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-    <div style="border-radius: 10px; height: 320px; overflow: hidden;">
-      <img src="images/manoir-2024.jpg" alt="Le manoir Glais-Bizoin en ruines après l'incendie de 2018" style="width:100%; height:100%; object-fit:cover; display:block;">
+<!-- ============ LE MANOIR ============ -->
+<section class="story story--alt story--rev pad">
+  <div class="story-grid">
+    <div class="story-media">
+      <img src="images/manoir-2024.jpg" alt="Le manoir Glais-Bizoin en ruines après l'incendie criminel de 2018">
     </div>
-    <div>
-      <p style="font-size: 11px; color: #A9742F; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px;">1852</p>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 28px; color: #1B2631; margin: 0 0 16px;">Le manoir Glais-Bizoin</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.8; margin: 0;">Bâti par Alexandre Glais-Bizoin, député républicain célèbre pour sa réforme du tarif postal unique. Il y a vécu jusqu'à sa mort en 1877. Le 25 janvier 2018, le manoir est ravagé par un incendie criminel. Sa restauration est au cœur du projet Amer.</p>
+    <div class="story-body">
+      <p class="story-date">1852 · Le manoir Glais-Bizoin</p>
+      <h2 class="voice">La demeure du député</h2>
+      <p>Bâti par Alexandre Glais-Bizoin, député républicain célèbre pour sa réforme du tarif postal unique. Il y a vécu jusqu'à sa mort en 1877. Le 25 janvier 2018, le manoir est ravagé par un incendie criminel. Sa restauration est au cœur du projet Amer.</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- LES BUNKERS -->
-<div style="background: #F2EDE6; padding: 64px 5vw;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-    <div>
-      <p style="font-size: 11px; color: #A9742F; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px;">1942 - 1943</p>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 28px; color: #1B2631; margin: 0 0 16px;">Les bunkers</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.8; margin: 0;">Onze ouvrages du Mur de l'Atlantique, ensemble fortifié numéroté Po 5, pour un effectif d'environ 40 soldats. Trois constructions permanentes, redécouvertes progressivement au rythme des débroussaillages depuis l'acquisition par la Ville en 2020.</p>
+<!-- ============ LES BUNKERS ============ -->
+<section class="story pad">
+  <div class="story-grid">
+    <div class="story-media">
+      <img src="images/bunker-int.jpg" alt="Intérieur d'un des bunkers du Mur de l'Atlantique">
     </div>
-    <div style="border-radius: 10px; height: 320px; overflow: hidden;">
-      <img src="images/bunker-int.jpg" alt="Intérieur d'un des bunkers du Mur de l'Atlantique" style="width:100%; height:100%; object-fit:cover; display:block;">
+    <div class="story-body">
+      <p class="story-date">1942 - 1943 · Les bunkers</p>
+      <h2 class="voice">Un point d'appui du Mur de l'Atlantique</h2>
+      <p>Onze ouvrages du Mur de l'Atlantique, ensemble fortifié numéroté Po 5, pour un effectif d'environ 40 soldats. Trois constructions permanentes, redécouvertes progressivement au rythme des débroussaillages depuis l'acquisition par la Ville en 2020.</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- LA NATURE -->
-<div style="background: #E8E3DB; padding: 64px 5vw;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-    <div style="border-radius: 10px; height: 320px; overflow: hidden;">
-      <img src="images/cand-rohannech.jpg" alt="Le domaine et la tour au-dessus de la baie de Saint-Brieuc" style="width:100%; height:100%; object-fit:cover; display:block;">
+<!-- ============ LA NATURE ============ -->
+<section class="story story--alt story--rev pad">
+  <div class="story-grid">
+    <div class="story-media">
+      <img src="images/cand-rohannech.jpg" alt="Le domaine boisé et la tour au-dessus de la baie de Saint-Brieuc">
     </div>
-    <div>
-      <p style="font-size: 11px; color: #A9742F; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px;">Natura 2000</p>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 28px; color: #1B2631; margin: 0 0 16px;">La nature</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.8; margin: 0;">13,7 hectares classés Natura 2000, baie de Saint-Brieuc Est. Des chauves-souris dans le tunnel de Cesson, des amphibiens, des reptiles, une flore remarquable. Le domaine est un refuge pour la biodiversité au cœur de l'agglomération.</p>
+    <div class="story-body">
+      <p class="story-date">Natura 2000 · La nature</p>
+      <h2 class="voice">Un refuge en pleine ville</h2>
+      <p>13,7 hectares classés Natura 2000, baie de Saint-Brieuc Est. Des chauves-souris dans le tunnel de Cesson, des amphibiens, des reptiles, une flore remarquable. Le domaine est un refuge pour la biodiversité au cœur de l'agglomération.</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- AUJOURD'HUI -->
-<div style="background: #1B2631; padding: 64px 5vw;">
-  <p style="font-size: 11px; color: #D4A574; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px;">2026</p>
-  <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 28px; color: #fff; margin: 0 0 16px; max-width: 560px;">Aujourd'hui, le domaine vous appartient.</h2>
-  <p style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; margin: 0 0 28px; max-width: 560px;">Propriété de la Ville de Saint-Brieuc depuis 2020, le domaine est ouvert au public depuis avril 2026. Sentiers sécurisés, bélvédères panoramiques, signalétique patrimoniale. Visites guidées chaque samedi par le service Archives et Patrimoine.</p>
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px;">
-    <div>
-      <p style="font-size: 32px; font-family: var(--font-voice); color: #D4A574; margin: 0;">8h - 20h</p>
-      <p style="font-size: 12px; color: #8B7D6B; margin: 4px 0 0;">Tous les jours en été</p>
+<!-- ============ AUJOURD'HUI ============ -->
+<section class="stats-band pad">
+  <p class="eyebrow">2026</p>
+  <h2 class="voice">Aujourd'hui, le domaine vous appartient.</h2>
+  <p class="lede">Propriété de la Ville de Saint-Brieuc depuis 2020, le domaine est ouvert au public depuis avril 2026. Sentiers sécurisés, belvédères panoramiques, signalétique patrimoniale. Visites guidées chaque samedi par le service Archives et Patrimoine.</p>
+  <div class="stats">
+    <div class="stat">
+      <p class="num">8h - 20h</p>
+      <p class="cap">Tous les jours en été</p>
     </div>
-    <div>
-      <p style="font-size: 32px; font-family: var(--font-voice); color: #D4A574; margin: 0;">Gratuit</p>
-      <p style="font-size: 12px; color: #8B7D6B; margin: 4px 0 0;">Accès au domaine, hors événements</p>
+    <div class="stat">
+      <p class="num">Gratuit</p>
+      <p class="cap">Accès au domaine, hors événements</p>
     </div>
-    <div>
-      <p style="font-size: 32px; font-family: var(--font-voice); color: #D4A574; margin: 0;">GR34</p>
-      <p style="font-size: 12px; color: #8B7D6B; margin: 4px 0 0;">À proximité du sentier des douaniers</p>
+    <div class="stat">
+      <p class="num">GR34</p>
+      <p class="cap">À proximité du sentier des douaniers</p>
     </div>
   </div>
-</div>
+</section>
 
-</div>
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="foot-cols">

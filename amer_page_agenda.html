@@ -4,178 +4,124 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agenda · AMER, Tour de Cesson</title>
-<meta name="description" content="L'agenda du domaine de la Tour de Cesson a Saint-Brieuc : concerts, marches, ateliers et rendez-vous patrimoine.">
+<meta name="description" content="L'agenda du domaine de la Tour de Cesson à Saint-Brieuc : concerts, marchés, ateliers et rendez-vous patrimoine.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Maquette AMER. Page Agenda. Meme charte que la page d'accueil (index.html). -->
-
-<style>
-  :root{
-    --font-sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-    --font-voice:'Fraunces','Iowan Old Style',Georgia,serif;
-    --ink:#0D0D0D;
-    --sand:#F2EDE6;
-    --night:#1B2631;
-    --amber:#D4A574;
-    --amber-ink:#A9742F;
-    --stone:#8B7D6B;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--ink);
-    color:#fff;
-    font-family:var(--font-sans);
-    font-weight:400;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-  img{display:block;max-width:100%;}
-  a{color:inherit;}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
-
-  /* topbar partagee */
-  .topbar{
-    position:relative;z-index:3;background:var(--ink);
-    display:flex;justify-content:space-between;align-items:center;
-    padding:22px 5vw;width:100%;
-  }
-  .brand{font-size:16px;font-weight:500;letter-spacing:6px;color:#fff;text-decoration:none;}
-  .topbar nav{display:flex;gap:26px;font-size:13px;}
-  .topbar nav a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
-  .topbar nav a:hover{color:#fff;}
-  .topbar nav a.active{color:#fff;border-bottom:1px solid var(--amber);padding-bottom:2px;}
-
-  /* footer partage (identique a l'accueil) */
-  .foot{background:var(--ink);padding:56px 5vw 30px;}
-  .foot-cols{display:grid;grid-template-columns:1fr auto 1fr;gap:48px;align-items:center;}
-  .foot .brand{font-size:18px;}
-  .foot .addr{font-size:12px;color:rgba(255,255,255,.28);margin:14px 0 0;line-height:1.85;}
-  .foot-center{text-align:center;max-width:540px;justify-self:center;}
-  .foot-def{font-family:var(--font-voice);font-size:15px;line-height:1.65;color:#C2B5A2;margin:0;}
-  .foot-def .def-tag{color:var(--amber);font-style:italic;margin-right:5px;}
-  .foot-copy{font-size:11px;color:rgba(255,255,255,.32);margin:16px 0 0;letter-spacing:.2px;}
-  .foot-right{display:flex;gap:44px;justify-content:flex-end;font-size:12px;}
-  .foot-right a{display:block;color:rgba(255,255,255,.42);line-height:2.2;text-decoration:none;transition:color .2s;}
-  .foot-right a:hover{color:#fff;}
-  @media(max-width:820px){
-    .foot-cols{grid-template-columns:1fr;gap:30px;justify-items:center;text-align:center;}
-    .foot-right{justify-content:center;}
-  }
-  @media(max-width:560px){
-    .topbar nav{display:none;}
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<h2 class="sr-only">Maquette page Agenda du site AMER</h2>
-<div style="font-family: var(--font-sans); overflow: hidden;">
 
-<div style="background: #0D0D0D; padding: 22px 5vw; display: flex; justify-content: space-between; align-items: center;">
-  <a class="brand" href="index.html" style="text-decoration:none;">AMER</a>
-  <nav style="display: flex; gap: 24px; font-size: 13px;">
-    <a href="amer_page_agenda.html" class="active" style="text-decoration: none;">Agenda</a>
-    <a href="amer_page_le_lieu.html" style="text-decoration: none;">Le lieu</a>
-    <a href="amer_page_participer.html" style="text-decoration: none;">Participer</a>
-    <a href="amer_page_contact.html" style="text-decoration: none;">Contact</a>
-  </nav>
-</div>
-
-<div style="background: #F2EDE6; padding: 48px 5vw 16px;">
-  <p style="font-size: 11px; color: #8B7D6B; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 12px;">Agenda</p>
-  <h1 style="font-family: var(--font-voice); font-weight: 400; font-size: 36px; color: #1B2631; margin: 0 0 28px;">Ce qui se passe à Amer.</h1>
-  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-    <span style="background: #1B2631; color: #fff; padding: 6px 16px; border-radius: 99px; font-size: 12px; cursor: pointer;">Tous</span>
-    <span style="background: transparent; color: #1B2631; border: 0.5px solid #1B2631; padding: 6px 16px; border-radius: 99px; font-size: 12px; cursor: pointer;">Musique</span>
-    <span style="background: transparent; color: #1B2631; border: 0.5px solid #1B2631; padding: 6px 16px; border-radius: 99px; font-size: 12px; cursor: pointer;">Marché</span>
-    <span style="background: transparent; color: #1B2631; border: 0.5px solid #1B2631; padding: 6px 16px; border-radius: 99px; font-size: 12px; cursor: pointer;">Atelier</span>
-    <span style="background: transparent; color: #1B2631; border: 0.5px solid #1B2631; padding: 6px 16px; border-radius: 99px; font-size: 12px; cursor: pointer;">Patrimoine</span>
+<!-- ============ HERO ============ -->
+<header class="page-hero" style="background-image:url('images/openair2.jpg');">
+  <div class="topbar">
+    <a class="brand" href="index.html">AMER</a>
+    <nav>
+      <a href="amer_page_agenda.html" class="active">Agenda</a>
+      <a href="amer_page_le_lieu.html">Le lieu</a>
+      <a href="amer_page_participer.html">Participer</a>
+      <a href="amer_page_contact.html">Contact</a>
+    </nav>
   </div>
-</div>
+  <div class="ph-content">
+    <p class="eyebrow">Agenda</p>
+    <h1>Ce qui se passe à Amer.</h1>
+    <p class="sub">Concerts au coucher de soleil, marchés, ateliers, nuits dans les bunkers. Le domaine vit toute l'année.</p>
+  </div>
+</header>
 
-<div style="background: #F2EDE6; padding: 24px 5vw 64px;">
-
-  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; padding: 32px 0; border-top: 1px solid rgba(139,125,107,0.2);">
-    <div style="border-radius: 10px; min-height: 220px; overflow: hidden;">
-      <img src="images/openair1.jpg" alt="DJ set au coucher de soleil sur le plateau du domaine" style="width:100%; height:100%; min-height:220px; object-fit:cover; display:block;">
-    </div>
-    <div style="padding: 8px 0;">
-      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-        <span style="font-size: 12px; color: #8B7D6B;">sam. 9 août 2026</span>
-        <span style="background: #1B2631; color: #D4A574; padding: 3px 10px; border-radius: 99px; font-size: 11px;">Musique</span>
-      </div>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 24px; color: #1B2631; margin: 0 0 12px;">Sunset session au bélvédère</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.7; margin: 0 0 20px;">DJ set au coucher de soleil, buvette locale, bières artisanales bretonnes. Rendez-vous dès 17h sur le plateau du domaine, face à la baie.</p>
-      <div style="display: flex; gap: 16px; align-items: center;">
-        <span style="font-size: 13px; color: #A9742F; font-weight: 500;">Gratuit, don libre</span>
-        <a style="font-size: 13px; color: #1B2631; border-bottom: 1px solid #1B2631; padding-bottom: 2px; cursor: pointer;">Réserver sur HelloAsso →</a>
-      </div>
-    </div>
+<!-- ============ FILTRES + LISTE ============ -->
+<section class="story pad">
+  <div class="chips">
+    <span class="chip on">Tous</span>
+    <span class="chip">Musique</span>
+    <span class="chip">Marché</span>
+    <span class="chip">Atelier</span>
+    <span class="chip">Patrimoine</span>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; padding: 32px 0; border-top: 1px solid rgba(139,125,107,0.2);">
-    <div style="border-radius: 10px; min-height: 220px; overflow: hidden;">
-      <img src="images/halloween2.jpg" alt="Parcours nocturne dans les bunkers pour Halloween" style="width:100%; height:100%; min-height:220px; object-fit:cover; display:block;">
-    </div>
-    <div style="padding: 8px 0;">
-      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-        <span style="font-size: 12px; color: #8B7D6B;">ven. 31 octobre 2026</span>
-        <span style="background: #1B2631; color: #D4A574; padding: 3px 10px; border-radius: 99px; font-size: 11px;">Patrimoine</span>
+  <div class="ag-list">
+
+    <article class="ag-row">
+      <div class="ag-media">
+        <img src="images/openair1.jpg" alt="DJ set au coucher de soleil sur le plateau du domaine">
       </div>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 24px; color: #1B2631; margin: 0 0 12px;">Halloween dans les bunkers</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.7; margin: 0 0 20px;">Parcours nocturne, escape game dans les casemates, contes au pied de la tour. Parcours famille l'après-midi, parcours adulte à la tombée de la nuit.</p>
-      <div style="display: flex; gap: 16px; align-items: center;">
-        <span style="font-size: 13px; color: #A9742F; font-weight: 500;">8€ / 5€ enfant</span>
-        <a style="font-size: 13px; color: #1B2631; border-bottom: 1px solid #1B2631; padding-bottom: 2px; cursor: pointer;">Réserver sur HelloAsso →</a>
+      <div class="ag-body">
+        <div class="ag-meta">
+          <span class="ag-date">sam. 22 août 2026</span>
+          <span class="ag-tag">Musique</span>
+        </div>
+        <h3 class="voice">Journée récréative musicale</h3>
+        <p>Musique live, buvette locale, bières artisanales bretonnes. Rendez-vous dès le milieu d'après-midi sur le plateau, face à la baie, jusqu'à ce que le soleil tombe dans la mer.</p>
+        <div class="ag-foot">
+          <span class="ag-price">Gratuit, don libre</span>
+          <a class="ink-link" href="#">Réserver sur HelloAsso <i class="arw">&rarr;</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="ag-row">
+      <div class="ag-media">
+        <img src="images/halloween2.jpg" alt="Parcours nocturne dans les bunkers pour Halloween">
+      </div>
+      <div class="ag-body">
+        <div class="ag-meta">
+          <span class="ag-date">ven. 31 octobre 2026</span>
+          <span class="ag-tag">Patrimoine</span>
+        </div>
+        <h3 class="voice">Halloween dans les bunkers</h3>
+        <p>Parcours nocturne, escape game dans les casemates, contes au pied de la tour. Parcours famille l'après-midi, parcours adulte à la tombée de la nuit.</p>
+        <div class="ag-foot">
+          <span class="ag-price">8€ / 5€ enfant</span>
+          <a class="ink-link" href="#">Réserver sur HelloAsso <i class="arw">&rarr;</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="ag-row">
+      <div class="ag-media">
+        <img src="images/noel1.jpg" alt="Marché de Noël au pied de la tour illuminée">
+      </div>
+      <div class="ag-body">
+        <div class="ag-meta">
+          <span class="ag-date">6 - 7 décembre 2026</span>
+          <span class="ag-tag">Marché</span>
+        </div>
+        <h3 class="voice">Marché de Noël d'Amer</h3>
+        <p>Artisans locaux, huîtres du Légué, cidre chaud, la tour illuminée. Balades aux lanternes, chorale dans le parc.</p>
+        <div class="ag-foot">
+          <span class="ag-price">Entrée libre</span>
+          <a class="ink-link" href="#">En savoir plus <i class="arw">&rarr;</i></a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="past">
+    <p class="eyebrow lbl-stone">Éditions passées</p>
+    <div class="past-grid">
+      <div class="past-card">
+        <span class="d">19 juillet 2026</span>
+        <h4>Journée récréative musicale</h4>
+        <p>Musique live, buvette, soleil.</p>
+      </div>
+      <div class="past-card">
+        <span class="d">Avril 2026</span>
+        <h4>Réouverture du domaine</h4>
+        <p>Visites guidées, promenade sonore.</p>
+      </div>
+      <div class="past-card">
+        <span class="d">2025</span>
+        <h4>1ère journée récréative</h4>
+        <p>Lancement de l'association.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; padding: 32px 0; border-top: 1px solid rgba(139,125,107,0.2);">
-    <div style="border-radius: 10px; min-height: 220px; overflow: hidden;">
-      <img src="images/noel1.jpg" alt="Marché de Noël au pied de la tour illuminée" style="width:100%; height:100%; min-height:220px; object-fit:cover; display:block;">
-    </div>
-    <div style="padding: 8px 0;">
-      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-        <span style="font-size: 12px; color: #8B7D6B;">6 - 7 décembre 2026</span>
-        <span style="background: #1B2631; color: #D4A574; padding: 3px 10px; border-radius: 99px; font-size: 11px;">Marché</span>
-      </div>
-      <h2 style="font-family: var(--font-voice); font-weight: 400; font-size: 24px; color: #1B2631; margin: 0 0 12px;">Marché de Noël d'Amer</h2>
-      <p style="font-size: 14px; color: #6B6B6B; line-height: 1.7; margin: 0 0 20px;">Artisans locaux, huîtres du Légué, cidre chaud, la tour illuminée. Balades aux lanternes, chorale dans le parc.</p>
-      <div style="display: flex; gap: 16px; align-items: center;">
-        <span style="font-size: 13px; color: #A9742F; font-weight: 500;">Entrée libre</span>
-        <a style="font-size: 13px; color: #1B2631; border-bottom: 1px solid #1B2631; padding-bottom: 2px; cursor: pointer;">En savoir plus →</a>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin-top: 48px;">
-    <p style="font-size: 11px; color: #8B7D6B; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 20px;">Éditions passées</p>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-      <div style="background: #E8E3DB; border-radius: 10px; padding: 20px; opacity: 0.7;">
-        <span style="font-size: 11px; color: #8B7D6B;">19 juillet 2026</span>
-        <h3 style="font-family: var(--font-voice); font-weight: 400; font-size: 16px; color: #1B2631; margin: 8px 0 8px;">Journée récréative musicale</h3>
-        <p style="font-size: 12px; color: #8B7D6B; margin: 0;">Musique live, buvette, soleil.</p>
-      </div>
-      <div style="background: #E8E3DB; border-radius: 10px; padding: 20px; opacity: 0.7;">
-        <span style="font-size: 11px; color: #8B7D6B;">Avril 2026</span>
-        <h3 style="font-family: var(--font-voice); font-weight: 400; font-size: 16px; color: #1B2631; margin: 8px 0 8px;">Réouverture du domaine</h3>
-        <p style="font-size: 12px; color: #8B7D6B; margin: 0;">Visites guidées, promenade sonore.</p>
-      </div>
-      <div style="background: #E8E3DB; border-radius: 10px; padding: 20px; opacity: 0.7;">
-        <span style="font-size: 11px; color: #8B7D6B;">2025</span>
-        <h3 style="font-family: var(--font-voice); font-weight: 400; font-size: 16px; color: #1B2631; margin: 8px 0 8px;">1ère journée récréative</h3>
-        <p style="font-size: 12px; color: #8B7D6B; margin: 0;">Lancement de l'association.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="foot-cols">
