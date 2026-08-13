@@ -8,6 +8,9 @@
     --amber-ink:#A9742F;   /* amber lisible sur fond clair */
     --stone:#8B7D6B;
   }
+  /* la page gere ses propres couleurs : empeche l'auto dark-mode des
+     navigateurs mobiles de recolorer le creme en blanc */
+  :root{color-scheme:only light;}
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;overflow-x:hidden;}
   body{
