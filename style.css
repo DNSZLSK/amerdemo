@@ -9,9 +9,10 @@
     --stone:#8B7D6B;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
   body{
     margin:0;
+    overflow-x:hidden;
     background:var(--ink);
     color:#fff;
     font-family:var(--font-sans);
@@ -65,6 +66,7 @@
     text-shadow:0 2px 22px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.45);
   }
   .hero-content .sub{font-size:15px;letter-spacing:.2px;color:rgba(255,255,255,.66);margin:0;}
+  .hero-content h1,.page-hero h1{overflow-wrap:break-word;}
 
   /* ---------- ARROW ---------- */
   .arw{font-style:normal;}
@@ -379,4 +381,37 @@
 .stnav nav{display:flex;gap:24px;font-size:12px;}
 .stnav nav a{color:rgba(255,255,255,.62);transition:color .2s;}
 .stnav nav a:hover,.stnav nav a.active{color:var(--amber);}
-@media(max-width:560px){ .stnav nav{display:none;} }
+
+/* ---- Menu mobile (hamburger) ---- */
+.burger{display:none;}
+.mobile-menu{display:none;}
+@media(max-width:560px){
+  /* sur mobile, la barre condensee laisse place au bouton menu */
+  .stnav{display:none;}
+
+  .burger{
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    position:fixed;top:12px;right:16px;z-index:90;
+    width:46px;height:46px;padding:0;
+    background:rgba(13,13,13,.55);border:none;border-radius:9px;cursor:pointer;
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  }
+  .burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s;}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-menu{
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    position:fixed;inset:0;z-index:85;
+    background:#0D0D0D;
+    opacity:0;pointer-events:none;transition:opacity .3s;
+  }
+  .mobile-menu nav{display:flex;flex-direction:column;text-align:center;gap:6px;}
+  .mobile-menu a{font-family:var(--font-voice);font-size:30px;color:#fff;padding:10px 20px;transition:color .2s;}
+  .mobile-menu a.active{color:var(--amber);}
+  body.menu-open{overflow:hidden;}
+  body.menu-open .mobile-menu{opacity:1;pointer-events:auto;}
+
+  .foot-right{gap:28px;}
+}

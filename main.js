@@ -93,6 +93,56 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Menu mobile (hamburger plein ecran) ---------- */
+  function buildMobileMenu() {
+    var links = [
+      ['index.html', 'Accueil'],
+      ['amer_page_agenda.html', 'Agenda'],
+      ['amer_page_le_lieu.html', 'Le lieu'],
+      ['amer_page_participer.html', 'Participer'],
+      ['amer_page_contact.html', 'Contact']
+    ];
+    var here = (location.pathname.split('/').pop() || 'index.html');
+
+    var burger = document.createElement('button');
+    burger.className = 'burger';
+    burger.setAttribute('aria-label', 'Ouvrir le menu');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.innerHTML = '<span></span><span></span><span></span>';
+
+    var menu = document.createElement('div');
+    menu.className = 'mobile-menu';
+    var nav = document.createElement('nav');
+    links.forEach(function (l) {
+      var a = document.createElement('a');
+      a.href = l[0];
+      a.textContent = l[1];
+      if (l[0] === here) a.className = 'active';
+      nav.appendChild(a);
+    });
+    menu.appendChild(nav);
+
+    document.body.appendChild(burger);
+    document.body.appendChild(menu);
+
+    function setOpen(open) {
+      document.body.classList.toggle('menu-open', open);
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    }
+    burger.addEventListener('click', function () {
+      setOpen(!document.body.classList.contains('menu-open'));
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+  }
+
+  buildMobileMenu();
   buildStickyNav();
   buildReveals();
 })();
