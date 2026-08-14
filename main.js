@@ -65,6 +65,8 @@
       '.insta-head', '.foot-cols',
       '.chips', '.ag-row', '.past',
       '.story-grid',
+      '.help-grid > *', '.chantier-head',
+      '.tv-inner > *',
       '.stats-band .eyebrow', '.stats-band h2', '.stats-band .lede', '.stats', '.offer-grid',
       '.band-center > *',
       '.contact-grid > div'
