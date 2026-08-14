@@ -66,7 +66,7 @@
       '.chips', '.ag-row', '.past',
       '.story-grid',
       '.sec-head', '.sub-head', '.tv-inner > *',
-      '.stats-band .eyebrow', '.stats-band h2', '.stats-band .lede', '.stats', '.offer-grid',
+      '.stats-band .eyebrow', '.stats-band h2', '.stats-band .lede', '.stats', '.support-col',
       '.band-center > *',
       '.contact-grid > div'
     ].join(',');
